@@ -16,7 +16,7 @@ app.use('/posts', postsRouter);
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
   mongoose
-    .connect("mongodb+srv://[USER]:[PASSWORD]@cluster0.wzmhqsd.mongodb.net/friendr?retryWrites=true&w=majority&appName=Cluster0")
+    .connect("mongodb+srv://andreiulinici1:zkAKaDqLCe16yxkJ@cluster0.q5sjkra.mongodb.net/friendr?retryWrites=true&w=majority&appName=Cluster0")
     .then(() => {
       console.log('Connected to DB and listening');
     })
