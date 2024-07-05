@@ -1,0 +1,17 @@
+# > docker-compose -f docker-compose.yml up
+
+version: '3'
+services:
+  friendr-frontend:
+    image: friendr-frontend:latest
+    environment:
+      PORT: 4200
+      # PROXY_API: http://friendr-backend:4200/
+    ports:
+      - 4200:4200
+  friendr-backend:
+    image: friendr-backend:latest
+    # environment:
+    #   MONGODB_URI: mongodb://friendr-db:27017/friendr
+    ports:
+      - 3000:3000

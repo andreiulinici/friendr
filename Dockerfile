@@ -1,3 +1,4 @@
+# Second solution (does not work)
 # Build and run backend, comment, then uncomment frontend part, build and run frontend.
 
 # Stage 1: Build the backend

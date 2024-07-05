@@ -12,4 +12,5 @@ In frontend:
 - TODO: run in production mode (call enableProdMode)
 
 Deploy locally:
-- See Dockerfile: Build and run backend, comment backend part in Dockerfile, then uncomment frontend part, build and run frontend.
+- First solution: use docker-compose YAML to Dockerize both frontend and backend. Run the commands from frontend.dockerfile and backend.dockerfile, then the command from yml.
+- Second solution (does not work): use Dockerfile
