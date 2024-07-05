@@ -8,3 +8,8 @@ First, copy the mongo connection string (from https://cloud.mongodb.com) in back
 In frontend:
 - npm i
 - ng serve
+- (angular.json was changed to use production by default on ng serve)
+- TODO: run in production mode (call enableProdMode)
+
+Deploy locally:
+- See Dockerfile: Build and run backend, comment backend part in Dockerfile, then uncomment frontend part, build and run frontend.

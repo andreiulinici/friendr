@@ -21,22 +21,25 @@ export interface UpdatePostLikes {
   providedIn: 'root',
 })
 export class AppService {
-  constructor(private http: HttpClient) {}
   user!: User;
+  readonly api = `${document.location.protocol}//${document.location.hostname}:3000/api`; // http://localhost:3000
+
+  constructor(private http: HttpClient) {}
 
   getUserByUsername(username: string): Observable<any> {
-    return this.http.get(`http://localhost:3000/users/${username}`);
+    console.log(this.api);
+    return this.http.get(`${this.api}/users/${username}`);
   }
   getPosts(): Observable<any> {
-    return this.http.get(`http://localhost:3000/posts`);
+    return this.http.get(`${this.api}/posts`);
   }
 
   createUser(userBody: User): Observable<any> {
-    return this.http.post(`http://localhost:3000/users/`, userBody);
+    return this.http.post(`${this.api}/users/`, userBody);
   }
 
   createPost(postBody: Post): Observable<any> {
-    return this.http.post(`http://localhost:3000/posts/`, postBody);
+    return this.http.post(`${this.api}/posts/`, postBody);
   }
 
   updatePostLikes(
@@ -44,7 +47,7 @@ export class AppService {
     postId: string
   ): Observable<any> {
     return this.http.patch(
-      `http://localhost:3000/posts/${postId}/likes`,
+      `${this.api}/posts/${postId}/likes`,
       updatePostLikesBody
     );
   }

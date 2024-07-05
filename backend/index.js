@@ -11,8 +11,8 @@ app.use(express.json());
 app.use(cors());
 
 //Routers
-app.use('/users', usersRouter);
-app.use('/posts', postsRouter);
+app.use('/api/users', usersRouter);
+app.use('/api/posts', postsRouter);
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
   mongoose
