@@ -12,5 +12,5 @@ In frontend:
 - TODO: run in production mode (call enableProdMode)
 
 Deploy locally:
-- First solution: use docker-compose YAML to Dockerize both frontend and backend. Run the commands from frontend.dockerfile and backend.dockerfile, then the command from yml.
+- First solution: use docker-compose YAML to Dockerize both frontend and backend. Run the commands from frontend.dockerfile and backend.dockerfile, then the command from yml (https://www.milanwittpohl.com/projects/tutorials/full-stack-web-app/dockerizing-our-front-and-backend)
 - Second solution (does not work): use Dockerfile
